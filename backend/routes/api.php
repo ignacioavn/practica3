@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/profile',[UserController::class,'index']);
+Route::put('/profile/{id}',[UserController::class,'update']);
