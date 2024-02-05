@@ -9,9 +9,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::with(['frameworks','hobbies','social_networks'])->get();
-
-        return response()->json(['user' => $user]);
+        return User::with(['frameworks','hobbies','social_networks'])->get();
     }
 
     public function update(Request $request, $id)
